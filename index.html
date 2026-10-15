@@ -8,12 +8,13 @@
 </head>
 <body>
   <main class="page">
-    <header class="page-header">
+    <header class="page-header hero">
       <h1>Grade Goal Tracker</h1>
-      <p>Add your course categories and see what you need to reach your target grade.</p>
+      <p>Plan your grades. Know exactly what you need.</p>
     </header>
 
-    <section class="card" aria-labelledby="target-grade-heading">
+    <section class="card card-tint" aria-labelledby="target-grade-heading">
+      <p class="step-label">01 YOUR GOAL</p>
       <h2 id="target-grade-heading">Your Goal</h2>
       <p class="section-description">What final course grade are you aiming for?</p>
       <div class="field-row">
@@ -34,6 +35,7 @@
     </section>
 
     <section class="card" aria-labelledby="add-category-heading">
+      <p class="step-label">02 ADD CATEGORY</p>
       <h2 id="add-category-heading">Add Category</h2>
       <form id="add-category-form">
         <div class="field-row">
@@ -74,12 +76,14 @@
     </section>
 
     <section class="card" aria-labelledby="category-list-heading">
+      <p class="step-label">03 YOUR COURSE</p>
       <h2 id="category-list-heading">Your Course</h2>
       <ul id="category-list" class="category-list"></ul>
       <p id="empty-category-message" class="empty-message">Add your first category to get started.</p>
     </section>
 
-    <section class="card results-card" id="results-section" aria-labelledby="results-heading" hidden>
+    <section class="card card-tint results-card" id="results-section" aria-labelledby="results-heading" hidden>
+      <p class="step-label">04 YOUR RESULTS</p>
       <h2 id="results-heading">Your Results</h2>
       <div class="results-grid">
         <div class="result-item">
