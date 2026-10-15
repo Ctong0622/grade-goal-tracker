@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade Goal Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Grade Goal Tracker</h1>
+      <p>Add your course categories and see what you need to reach your target grade.</p>
+    </header>
+
+    <section class="card" aria-labelledby="target-grade-heading">
+      <h2 id="target-grade-heading">Your Goal</h2>
+      <p class="section-description">What final course grade are you aiming for?</p>
+      <div class="field-row">
+        <label for="target-grade-input">Target Grade</label>
+        <div class="input-with-suffix">
+          <input
+            type="number"
+            id="target-grade-input"
+            min="0"
+            max="100"
+            placeholder="e.g. 90"
+          />
+          <span class="suffix">%</span>
+        </div>
+      </div>
+      <p id="target-grade-error" class="error-message" role="alert"></p>
+      <p id="target-grade-display" class="target-grade-display"></p>
+    </section>
+
+    <section class="card" aria-labelledby="add-category-heading">
+      <h2 id="add-category-heading">Add Category</h2>
+      <form id="add-category-form">
+        <div class="field-row">
+          <label for="category-name-input">Category Name</label>
+          <input type="text" id="category-name-input" placeholder="e.g. Midterms, Homework" />
+        </div>
+
+        <div class="field-row">
+          <label for="category-weight-input">Weight in Course</label>
+          <p class="field-help">How much is this category worth in your final grade?</p>
+          <div class="input-with-suffix">
+            <input type="number" id="category-weight-input" min="0" max="100" placeholder="e.g. 30" />
+            <span class="suffix">%</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label for="category-status-input">Has this category been graded?</label>
+          <select id="category-status-input">
+            <option value="yes">Yes</option>
+            <option value="not-yet">Not Yet</option>
+          </select>
+        </div>
+
+        <div class="field-row" id="category-grade-field">
+          <label for="category-grade-input">Your Grade</label>
+          <p class="field-help">Enter your current grade for this category.</p>
+          <div class="input-with-suffix">
+            <input type="number" id="category-grade-input" min="0" max="100" placeholder="e.g. 87" />
+            <span class="suffix">%</span>
+          </div>
+        </div>
+
+        <p id="add-category-error" class="error-message" role="alert"></p>
+
+        <button type="button" id="add-category-button" class="btn btn-primary">+ Add Category</button>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="category-list-heading">
+      <h2 id="category-list-heading">Your Course</h2>
+      <ul id="category-list" class="category-list"></ul>
+      <p id="empty-category-message" class="empty-message">Add your first category to get started.</p>
+    </section>
+
+    <section class="card results-card" id="results-section" aria-labelledby="results-heading" hidden>
+      <h2 id="results-heading">Your Results</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <span class="result-label">Current Grade</span>
+          <span class="result-value" id="current-grade-value">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Completed Weight</span>
+          <span class="result-value" id="completed-weight-value">--</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Remaining Weight</span>
+          <span class="result-value" id="remaining-weight-value">--</span>
+        </div>
+      </div>
+      <div class="grade-needed">
+        <span class="grade-needed-label">Grade Needed</span>
+        <span class="grade-needed-value" id="grade-needed-value">--</span>
+        <span class="grade-needed-sub" id="grade-needed-sub"></span>
+      </div>
+    </section>
+
+    <button type="button" id="reset-button" class="btn btn-secondary">Reset</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
