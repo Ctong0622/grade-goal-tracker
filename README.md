@@ -26,9 +26,7 @@ Everything is calculated live in the browser with plain HTML, CSS, and JavaScrip
 
 ## Live Site
 
-This project has not been deployed to GitHub Pages yet.
-
-**Live link:** `[ADD GITHUB PAGES URL HERE ONCE DEPLOYED]`
+**Live link:** https://ctong0622.github.io/grade-goal-tracker/
 
 ## Difference From My Original Expectation
 
